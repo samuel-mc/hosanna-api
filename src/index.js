@@ -13,4 +13,8 @@ app.listen (process.env.PORT || 3030, () => {
     console.log('Server is running');
 })
 
+app.get('/', (req, res) => {
+    res.redirect('/api/v1/email');
+})
+
 app.use('/api/v1', require('./routes/index.routes'));
